@@ -11,8 +11,9 @@
     :root {
       --bg: #0b0d11;
       --surface: rgba(255,255,255,0.04);
-      --border: rgba(255,255,255,0.09);
-      --accent: #c8a96e;
+      --border: rgba(27, 9, 9, 0.09);
+      --borderdark: rgba(27, 9, 9, 0.74);
+      --accent: #c8a86e;
       --accent2: #7eb8c9;
       --text: #e8e4dc;
       --muted: #888a90;
@@ -183,7 +184,7 @@
     .btn-outline {
       background: transparent;
       color: var(--text);
-      border: 1px solid var(--border);
+      border: 1px solid var(--border2);
     }
     .btn-outline:hover { border-color: rgba(255,255,255,0.25); background: rgba(255,255,255,0.04); }
 
@@ -262,7 +263,7 @@
 
     .about-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat (1 1fr);
       gap: 4rem;
       align-items: start;
     }
@@ -298,26 +299,25 @@
       padding: 0.35rem 0.85rem;
       border-radius: 20px;
       background: var(--accent);
-      border: 1px solid var(--border);
+      border: 1px solid var(--border2);
       color: var(--bg);
       letter-spacing: 0.04em;
     }
     
     .stats-grid {
-      align: right;
       margin-top: 2rem;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1px;
       background: var(--border);
       border: 1px solid var(--border);
-      border-radius: 16px;
+      border-radius: 14px;
       overflow: hidden;
     }
 
     .stat {
       background: var(--surface);
-      padding: 1.6rem;
+      padding: 1.8rem;
       text-align: center;
     }
 
@@ -654,6 +654,17 @@
           <span class="skill-tag">Database Management</span>
           <span class="skill-tag">Video Editing</span>
         </div>
+                
+        <div class="tech-list">
+          <span class="tech-tag">HTML &amp; CSS</span>
+          <span class="tech-tag">JavaScript</span>
+          <span class="tech-tag">Visual Basic</span>
+          <span class="tech-tag">SQL</span>
+          <span class="tech-tag">PHP</span>
+          <span class="tech-tag">Wordpress</span>
+          <span class="tech-tag">MySQL</span>
+          <span class="tech-tag">Apache</span>
+      </div>
         
       <div class="stats-grid reveal">
         <div class="stat">
@@ -672,17 +683,6 @@
           <span class="stat-num">∞</span>
           <span class="stat-label">Curiosity</span>
         </div>
-      </div>
-        
-        <div class="tech-list">
-          <span class="tech-tag">HTML &amp; CSS</span>
-          <span class="tech-tag">JavaScript</span>
-          <span class="tech-tag">Visual Basic</span>
-          <span class="tech-tag">SQL</span>
-          <span class="tech-tag">PHP</span>
-          <span class="tech-tag">Wordpress</span>
-          <span class="tech-tag">MySQL</span>
-          <span class="tech-tag">Apache</span>
       </div>
     </div>
   </section>
