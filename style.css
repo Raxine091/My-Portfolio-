@@ -72,7 +72,7 @@
       text-transform: uppercase;
       padding: 0.45rem 0.95rem;
       border-radius: 6px;
-      transition: color 0.2s, background 0.2s;
+      transition: color 0.2s, background-color 0.2s;
     }
     nav a:hover { color: var(--text); background: rgba(255,255,255,0.06); }
     nav a.active { color: var(--accent); }
@@ -83,7 +83,7 @@
       border: 1px solid var(--accent);
       border-radius: 6px;
       color: var(--accent) !important;
-      transition: background 0.2s, color 0.2s !important;
+      transition: background-color 0.2s, color 0.2s !important;
     }
     .nav-cta:hover { background: var(--accent) !important; color: var(--bg) !important; }
 
@@ -120,7 +120,7 @@
       animation: fadeUp 0.7s ease both;
     }
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(24px); }
+      from { opacity: 0; transform: translateY(-24px); }
       to   { opacity: 1; transform: translateY(0); }
     }
 
@@ -166,7 +166,7 @@
       text-decoration: none;
       cursor: pointer;
       border: none;
-      transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+      transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
     }
     .btn:hover { transform: translateY(-2px); }
 
