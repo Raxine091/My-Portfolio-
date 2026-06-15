@@ -566,7 +566,7 @@
     .reveal {
       opacity: 0;
       transform: translateY(28px);
-      transition: opacity 0.65s ease, transform 0.65s ease;
+      transition: opacity 0.2s ease, transform 0.2s ease;
     }
     .reveal.visible { opacity: 1; transform: none; }
 
