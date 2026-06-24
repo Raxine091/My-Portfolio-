@@ -1,16 +1,16 @@
  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg: #0b0d11;
-      --surface: rgba(255,255,255,0.04);
+      --bg: #412229ec;
+      --surface: #412228;
       --border: rgba(27, 9, 9, 0.09);
       --borderdark: rgba(27, 9, 9, 0.74);
-      --accent: #c8a86e;
-      --accent2: #7eb8c9;
-      --text: #e8e4dc;
-      --muted: #888a90;
-      --glass-bg: rgba(12, 14, 20, 0.55);
-      --glass-blur: blur(22px) saturate(160%);
+      --accent: #ffa600;
+      --accent2: #00c0fa;
+      --text: #ffffff;
+      --muted: #edd4ab;
+      --glass-bg: #41222433;
+      --glass-blur: blur(22px) saturate(120%);
     }
 
     html { scroll-behavior: smooth; }
@@ -168,10 +168,10 @@
       border: none;
       transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
     }
-    .btn:hover { transform: translateY(-2px); }
+    .btn:hover { transform: translateY(-2px); color: #000; background: var(--accent); }
 
     .btn-primary {
-      background: #c8a86e42;
+      background: var(--surface);
       color: var(--accent);
       box-shadow: 0 4px 24px rgba(200,169,110,0.3);
       border: 1px solid #c8a86e;
@@ -270,17 +270,34 @@
     .about-bio p + p { margin-top: 1rem; }
 
 
+    .grid{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .grid-row{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
     .skills-card{
-        text-align: top-left;
-         color:grey;
+        text-align: top;
+        color:grey;
         margin: 1.5rem;
+        border: 1px solid var(--border);
+        border-radius: 14px;
         padding: 8px;
         display: flex;
         flex-direction: column;
-        grid-template-columns: 3-repeat(1fr);
+        flex-wrap: wrap;
+        grid-template-columns: repeat(2) 1fr;
         min-width:fit-content;
-        align-items:center;
-        background: #ffffff15;
+        align-items:left;
+        background: #ffffff00;
     }
     .skills-list {
       order: 2;
@@ -301,12 +318,15 @@
     }
      .tech-card{
         text-align: top-left;
-         color:grey;
+        color:grey;
+        border: 1px solid var(--border);
+        border-radius: 14px;
         margin: 1.5rem;
         padding: 8px;
         display: flex;
-         flex-direction: column ;
-        grid-template-columns: 3-repeat(1fr);
+        flex-direction: column ;
+        flex-wrap: wrap;
+        grid-template-columns: repeat(3)1fr;
         min-width:fit-content;
         align-items:center;
          background: #ffffff15;
@@ -321,7 +341,7 @@
     .tech-tag {
       font-size: 0.78rem;
       padding: 0.35rem 0.85rem;
-      border-radius: 20px;
+      border-radius: 4px;
       background: #c8a86e41;
       border: 1px solid #c8a86e;
       color: #c8a86e;
@@ -389,6 +409,7 @@
       transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
       display: flex;
       flex-direction: column;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.25);
     }
 
     .project-card:hover {
