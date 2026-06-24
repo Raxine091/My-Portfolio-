@@ -174,7 +174,7 @@
       background: var(--surface);
       color: var(--accent);
       box-shadow: 0 4px 24px rgba(200,169,110,0.3);
-      border: 1px solid #c8a86e;
+      border: .2px solid #c8a86e;
     }
     .btn-primary:hover { box-shadow: 0 6px 30px rgba(200,169,110,0.45); }
 
