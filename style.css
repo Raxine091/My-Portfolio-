@@ -11,7 +11,7 @@
       --muted: #edd4ab;
       --glass-bg: #41222433;
       --glass-blur: blur(22px) saturate(120%);
-      --glass-blur1: blur(16px) saturate(120%);
+      --glass-blur1: blur(12px) saturate(120%);
     }
 
     html { scroll-behavior: smooth; scroll-padding-top: 70px;}
@@ -39,7 +39,6 @@
       background-image: url(bg.jpg);
       background-size: cover;
       background-position: center;
-      filter: blur(2px);
       z-index: 1;
     }
 
