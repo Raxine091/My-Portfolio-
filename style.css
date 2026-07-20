@@ -169,7 +169,7 @@
 
     .hero-desc {
       color: var(--muted);
-      font-size: 1.35rem;
+      font-size:clamp(1.125rem, 2.5vw, 1.35rem);
       line-height: 1.8;
       max-width: 420px;
       margin-bottom: 2.2rem;
@@ -295,7 +295,7 @@
     }
 
     .about-bio { order: 1; }
-    .about-bio { color: var(--muted);font-size:1.35rem; line-height: 1.9; }
+    .about-bio { color: var(--muted);font-size:clamp(1.125rem, 2.5vw, 1.35rem); line-height: 1.9; }
     .about-bio p + p { margin-top: 1rem; }
 
 
@@ -371,9 +371,9 @@
       font-size: 0.78rem;
       padding: 0.35rem 0.85rem;
       border-radius: 4px;
-      background: #c8a86e41;
-      border: 1px solid #c8a86e;
-      color: #c8a86e;
+      background: #0c08007c;
+      border: 1px solid #ffa600;
+      color: #fca400;
       letter-spacing: 0.04em;
     }
     
@@ -429,17 +429,33 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 1.5rem;
     }
+    @media (max-width:480px){
+      .projects-grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+      }
+      .project-card{
+        max-width: 90%;
+        display: flex;
+        flex-direction: column;
+      }
+      .project-desc{
+        display: none;
+      }
+    }
 
     .project-card {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 16px;
       overflow: hidden;
-      transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+      transition: all 0.3s;
       display: flex;
       flex-direction: column;
       box-shadow: 0 12px 40px rgba(0,0,0,0.25);
     }
+
 
     .project-card:hover {
       transform: translateY(-6px);
@@ -521,7 +537,12 @@
       border: 1px solid var(--border);
     }
 
-    .project-body { padding: 1.3rem 1.4rem 1.5rem; flex: 1; display: flex; flex-direction: column; }
+    .project-body { 
+      padding: 1.3rem 1.4rem 1.5rem; 
+      flex: 1; 
+      display: flex; 
+      flex-direction: column; 
+    }
 
     .project-tags {
       display: flex;
@@ -674,4 +695,47 @@
       color:#ffa600;
     }
 
+      .icon-button{
+        max-width: 30px;
+        display:inline-flex;
+        gap:12px;
+        align-items:center;
+        padding:10px 18px;
+        border:none;
+        border-radius:6px;
+        background: none;
+        color:var(--muted);
+        cursor:pointer;
+        overflow:hidden;
+        transition: all 0.3s ease-in-out;
+      }
+      .icon-button.active{
+        color:var(--accent);
+      }
+      .button-text{
+        max-width:110px;
+        opacity:1;
+        white-space:nowrap;
+        transition: all 0.3s ease-in-out;
+      }
+      .icon-button:hover{
+        gap:6px;
+        padding-right:18px;
+      }
+      .icon-button:hover, .button-text:hover{
+        max-width:110px;
+        opacity:1;
+        color:var(--accent2);
+        background: var(--glass-bg);
+      }
+      @media (max-width: 480px) {
+        .icon-button, .button-text{
+          max-width:fit-content;
+          padding:2px;
+          gap: 1px;
+          column-gap: 8px;
+          display: flex;
+          flex-direction: column;
+        }
+      }
 

@@ -17,11 +17,17 @@
   <header>
     <a href="#home" class="logo">Arnold<span>Sam</span></a>
     <nav>
-      <a href="#home" class="active" onclick="setActive(this)">Home</a>
-      <a href="#about"    onclick="setActive(this)">About</a>
-      <a href="#projects" onclick="setActive(this)">Work</a>
-      <a href="#contact"  onclick="setActive(this)" class="nav-cta">Contact</a>
-    </nav>
+      <a href="#home" onclick="setActive(this)" class="icon-button"><i class="fas fa-home"></i><span class="button-text">Home</span></a>
+      <a href="#about"    onclick="setActive(this)" class="icon-button"><i class="fas fa-circle-info"></i><span class="button-text">About</span></a>
+      <a href="#projects" onclick="setActive(this)" class="icon-button"><i class="fas fa-briefcase"></i><span class="button-text">Work</span></a>
+      <a href="#contact"  onclick="setActive(this)" class="icon-button"><i class="fas fa-user"></i><span class="button-text">Contact</span></a>
+    </nav><!--
+    <nav>
+      <button class="icon-button" class="active" onclick="switchActive(this, '#home')"><i class="fas fa-home"></i><span class="button-text">HOME</span></button>
+      <button class="icon-button" onclick="switchActive(this, '#about')"><i class="fas fa-circle-info"></i><span class="button-text">ABOUT</span></button>
+      <button class="icon-button" onclick="switchActive(this, '#projects')"><i class="fas fa-briefcase"></i><span class="button-text">SAMPLES</span></button>
+      <button class="icon-button" onclick="switchActive(this, '#contact')"><i class="fas fa-user"></i><span class="button-text">CONTACT</span></button>
+    </nav>-->
   </header>
 
 
@@ -76,8 +82,11 @@
           <span class="tech-tag">Software Development</span>
           <span class="tech-tag">Software Evaluation</span>
           <span class="tech-tag">Software Maintenance</span>
-          <span class="tech-tag">Web Design, Development &amp; Management</span>
+          <span class="tech-tag">Web Design</span>
+          <span class="tech-tag">Web Development</span>
+          <span class="tech-tag">Web Testing</span>
           <span class="tech-tag">Graphic Design</span>
+          <span class="tech-tag">Database Design</span>
           <span class="tech-tag">Database Management</span>
           <span class="tech-tag">Search Engine Optimization (SEO)</span>
         </div>
